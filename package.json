@@ -1,0 +1,56 @@
+{
+  "name": "graphql-tools-type-email",
+  "version": "1.0.0",
+  "description": "Email scalar type for graphql-tools",
+  "main": "dist/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run lint && nyc mocha --require babel-register test",
+    "lint": "eslint src test",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "build": "babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/up9cloud/graphql-tools-type-email.git"
+  },
+  "keywords": [
+    "graphql",
+    "graphql-tools",
+    "type",
+    "email",
+    "scalar"
+  ],
+  "author": "sstc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/up9cloud/graphql-tools-type-email/issues"
+  },
+  "homepage": "https://github.com/up9cloud/graphql-tools-type-email#readme",
+  "peerDependencies": {
+    "graphql": "^0.12.3",
+    "validator": "^9.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-node8": "^1.2.0",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.16.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "graphql": "^0.12.3",
+    "graphql-tools": "^2.19.0",
+    "mocha": "^5.0.0",
+    "nyc": "^11.4.1",
+    "validator": "^9.3.0"
+  },
+  "engines": {
+    "node": ">=8"
+  }
+}

@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- node
+- 8
+after_success:
+- npm run coverage
+- npm run build
+deploy:
+  provider: npm
+  email: "$NPM_EMAIL"
+  api_key:
+    secure: OP/ZJbyckCAOzENOBkPLwSg2b/uAQk1pPVAwIEtKbr6CfrGVL4XhMneha34shKnWKdDxO7bXbmBcRvujlIYZBbBPnzsv2EbJjniajo5AXkGoodp4lWYnA1GnvFcznvx85AX0kj5dgmTFRIAxuG+5oFh1uziMzMU2NRb95RZjQU+WGnLdfhND8I2LlEXc/eTNgjl6c0ENYVy5ixH4MeGbHGJosB8BW76viq1glt0wm7Rn5Lb6P7Bnue0SPqOENzXVCsWm5mKKMPMb2m8FjdWX4w6+lLnrLEnpv2QW/nqSA4VlMg3vCRSOLvbL+ZyfWodvdF/S3uMQkCQjtWXsrr7NgZL3+NTEmNXXHB+aHIadgBGLYlyz3bJmb6/ukF2CblPOYkA1iwA6mmlgDDnM2Kx8MmFD28/SuDuJQhSF6lKFrwqw4WOFCCYR37xLGTAwKHwC5aMa3Z3/N5WTShR6oRMyiz/EFAIPCYjmaVBkRy1dYh5sq8S+92orUUhYzv1OvS5baQ9bZdz3UGSoln7A4puSa8FHhB0d7uU9uU5MjsNUyYnTl/9nUGyexiyG24X6t+iY+zeHmZQpR7Mr/nal9adh/L925IkYaeL675iBtc8wHUNk2n9chsCcBTzx8uHjBrtmHxuzGAun9t2UAvLlGkXdh5OQhH51NiWpMoxe0k90dtE=
+  skip_cleanup: true
+  on:
+    repo: up9cloud/graphql-tools-type-email
+    branch: master
