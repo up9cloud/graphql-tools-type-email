@@ -53,7 +53,12 @@ describe('Email', () => {
       for (let email of whiteList) {
         let { data } = await graphql(
           schema,
-          `query { value(email: ${JSON.stringify(email)}) }`
+          `query ($email: Email) {
+            value(email: $email)
+          }`,
+          null,
+          null,
+          { email }
         )
         expect(data.value).to.be.equal(email)
       }
@@ -62,7 +67,12 @@ describe('Email', () => {
       for (let email of blackList) {
         let data = await graphql(
           schema,
-          `query { value(email: ${JSON.stringify(email)}) }`
+          `query ($email: Email) {
+            value(email: $email)
+          }`,
+          null,
+          null,
+          { email }
         )
         expect(data.data).to.be.equal(undefined)
         // expect(data.data.value).to.be.equal(undefined)
@@ -76,12 +86,7 @@ describe('Email', () => {
       for (let email of whiteList) {
         let { data } = await graphql(
           schema,
-          `query ($email: Email) {
-            value(email: $email)
-          }`,
-          null,
-          null,
-          { email }
+          `query { value(email: ${JSON.stringify(email)}) }`
         )
         expect(data.value).to.be.equal(email)
       }
@@ -90,12 +95,7 @@ describe('Email', () => {
       for (let email of blackList) {
         let data = await graphql(
           schema,
-          `query ($email: Email) {
-            value(email: $email)
-          }`,
-          null,
-          null,
-          { email }
+          `query { value(email: ${JSON.stringify(email)}) }`
         )
         expect(data.data).to.be.equal(undefined)
         // expect(data.data.value).to.be.equal(undefined)
