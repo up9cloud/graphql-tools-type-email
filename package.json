@@ -1,6 +1,6 @@
 {
   "name": "graphql-tools-type-email",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Email scalar type for graphql-tools",
   "main": "dist/index.js",
   "directories": {
