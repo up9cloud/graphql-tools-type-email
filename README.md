@@ -9,7 +9,7 @@ Email scalar type for [graphql-tools](https://github.com/apollographql/graphql-t
 
 ```js
 import { makeExecutableSchema } from 'graphql-tools'
-import email from 'graphql-tools-type-email'
+import Email from 'graphql-tools-type-email'
 
 let typeDefs = [`
 scalar Email
@@ -26,17 +26,4 @@ let resolvers = {
 let schema = makeExecutableSchema({ typeDefs, resolvers })
 
 export default schema
-```
-
-## Minimum amount of module files
-
-```console
-$ tree ./node_modules/graphql-tools-type-email
-./node_modules/graphql-tools-type-email
-├── README.md
-├── dist
-│   └── index.js
-└── package.json
-
-1 directory, 3 files
 ```
