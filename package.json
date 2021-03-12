@@ -46,7 +46,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "graphql": "^14.0.2",
     "graphql-tools": "^4.0.3",
-    "mocha": "^5.2.0",
+    "mocha": "^8.3.2",
     "nyc": "^13.1.0",
     "validator": "^10.9.0"
   },
